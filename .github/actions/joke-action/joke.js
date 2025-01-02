@@ -1,5 +1,18 @@
-{
-  id: '0LuXvkq4Muc',
-  joke: "I knew I shouldn't steal a mixer from work, but it was a whisk I was willing to take.",
-  status: 200
+const request = require("request-promise");
+
+const options = {
+  method: "GET",
+  uri: "https://icanhazdadjoke.com/",
+  headers: {
+    Accept: "application/json",
+    "User-Agent": "Writing JavaScript action GitHub Skills course.",
+  },
+  json: true,
+};
+
+async function getJoke() {
+  const res = await request(options);
+  return res.joke;
 }
+
+module.exports = getJoke;
