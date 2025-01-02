@@ -1,0 +1,7 @@
+name: "Joke Action"
+
+description: "test action"
+
+runs:
+  using: "node16"
+  main: "main.js"
