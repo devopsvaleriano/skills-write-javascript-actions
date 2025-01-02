@@ -2,6 +2,10 @@ name: "Joke Action"
 
 description: "test action"
 
+outputs:
+  joke-output:
+    description: The resoulting joke from this trashy api
+
 runs:
   using: "node16"
   main: "main.js"
